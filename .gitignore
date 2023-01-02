@@ -7,3 +7,5 @@
 /frontend/package-lock.json
 /frontend/.env
 /frontend/build
+
+.env

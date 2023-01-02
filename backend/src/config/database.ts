@@ -7,9 +7,9 @@ module.exports = {
   },
   dialect: process.env.DB_DRIVER || "mysql",
   timezone: "-03:00",
-  host: process.env.DB_HOST || 'localhost',
-  database: process.env.DB_NAME || 'whaticket',
-  username: process.env.DB_USER || 'whaticket',
-  password: process.env.DB_PASS || 'whaticket',
+  host: process.env.DB_HOST || 'mysqldb',
+  database: process.env.DB_NAME || 'cash_db',
+  username: process.env.DB_USER || 'root',
+  password: process.env.DB_PASS || 'cashforce',
   logging: false
 };

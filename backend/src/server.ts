@@ -5,6 +5,9 @@
  */
 
 import app from "./app";
+import dotenv from 'dotenv';
+import path from 'path';
+dotenv.config({path: path.join(__dirname, '..', '.env')});
 
 // eslint-disable-next-line
 const debug = require('debug')('backend:server');
@@ -16,8 +19,9 @@ const http = require('http');
  * Get port from environment and store in Express.
  */
 
-const port = normalizePort(process.env.PORT || '3001');
+const port = normalizePort(process.env.NODE_DOCKER_PORT || '8080');
 app.set('port', port);
+console.log("Starter server on port: ", port)
 
 /**
  * Create HTTP server.

@@ -7,7 +7,11 @@
     "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules src/server.ts",
     "build": "tsc",
     "lint": "eslint . --ext .ts",
-    "lint-fix": "eslint . --ext .ts --fix"
+    "lint-fix": "eslint . --ext .ts --fix",
+    "docker-migrate": "docker exec -it cashforcetest_backend_1 npx sequelize db:migrate",
+    "docker-seed": "docker exec -it cashforcetest_backend_1 npx sequelize db:seed:all",
+    "docker-undo-migrate": "docker exec -it cashforcetest_backend_1 npx sequelize db:migrate:undo:all",
+    "docker-undo-seed": "docker exec -it cashforcetest_backend_1 npx sequelize db:seed:undo:all"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",

@@ -1,0 +1,11 @@
+.MuiTableBody-root th:first-child {
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    border-left: 1px solid #DFE2EB;
+}
+
+.MuiTableBody-root td:last-child {
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border-right: 1px solid #DFE2EB;
+}
