@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import api from '../../services/api';
 import Grid from '@mui/material/Grid';
-import { AppBar, Divider } from '@mui/material';
+import { AppBar, Box, Divider } from '@mui/material';
 import { ThemeProvider } from '@mui/material/styles';
 import { theme, useStyles } from './styles';
 import NotesHeader from '../../components/CashForceComponents/NotesHeader';
@@ -23,15 +23,20 @@ const CashForcePage = () => {
         <>
         <ThemeProvider theme={theme}>
             <Grid container className={classes.gridContainer}>
-                <Grid item xs={2} className={classes.sideBar}>
+                <Grid 
+                    item xs={3} 
+                    md={3}
+                    className={classes.sideBar}
+                    display={{ md: 'block', sm: "none", sx: 'none', xs: 'none' }}
+                >
                     <SiderBar classes={classes} />
                 </Grid>
-                <Grid item xs={10} className={classes.main}>
+                <Grid item xs={12} md={9} sm={12} className={classes.main}>
                     <AppBar className={classes.header} position="static">
                     </AppBar>
                     <Divider />
                     <NotesHeader classes={classes} />
-                    <TableNotes data={orders} />
+                    <TableNotes data={orders} classes={classes} />
                 </Grid>
             </Grid>
         </ThemeProvider>

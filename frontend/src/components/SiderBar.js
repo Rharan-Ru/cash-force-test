@@ -17,8 +17,8 @@ const SiderBar = ({ classes }) => {
                     button 
                     className={classes.ligth}
                 >
-                    <InsightsIcon className={classes.icon} />
-                    <ListItemText primary="Notas Fiscais" />
+                    <InsightsIcon style={{color: '#00AD8C'}} className={classes.icon} />
+                    <ListItemText style={{color: '#00AD8C'}} primary="Notas Fiscais" />
                 </ListItem>
             </List>
         </div>

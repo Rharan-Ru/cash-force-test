@@ -11,18 +11,19 @@ export const useStyles = makeStyles((theme) => ({
     },
     main: {
         boxShadow: '0px 10px 30px rgba(225, 229, 236, 0.5)',
+        width: 'auto'
     },
     ligth: {
         "&:before": {
             content: "''",
             width: '4px',
             height: '65px',
-            backgroundColor: 'blue',
+            backgroundColor: '#00AD8C',
             marginRight: '20px'
         }
     },
     icon: {
-        marginRight: '10px'
+        marginRight: '10px',
     },
     logo: {
         padding: '20px'
@@ -35,7 +36,20 @@ export const useStyles = makeStyles((theme) => ({
         marginTop: '8vh',
     },
     subtitle: {
-        color: 'gray'
+        color: '#727D94'
+    },
+    providerButton: {
+        border: '1px solid #CAD3FF',
+        padding: '8px 29px',
+        borderRadius: '24px',
+        backgroundColor: 'inherit',
+        color: '#727D94',
+        '&:hover': {
+            transition: '0.7s',
+            backgroundColor: '#CAD3FF',
+            color: 'black',
+            cursor: 'pointer'
+        }
     }
 }));
 
@@ -75,7 +89,8 @@ export const theme = createTheme({
             styleOverrides: {
                 // Name of the slot
                 head: {
-                    border: 'none'
+                    border: 'none',
+                    color: '#A1A8B8'
                 },
                 root: {
                     borderTop: '1px solid rgba(224, 224, 224, 1)',

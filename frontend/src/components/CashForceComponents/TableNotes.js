@@ -10,7 +10,7 @@ import "./styleForm.css";
 
 const orderBuyerStatus = ['Pendente de confirmação', 'Pedido confirmado', 'Não reconhece o pedido', 'Mercadoria não recebida', 'Recebida com avaria', 'Devolvida', 'Recebida com devolução parcial', 'Recebida e confirmada', 'Pagamento Autorizado']
 
-const TableNotes = ({ data }) => {
+const TableNotes = ({ data, classes }) => {
   const padTo2Digits = (num) => {
     return num.toString().padStart(2, '0');
   }
@@ -38,12 +38,12 @@ const TableNotes = ({ data }) => {
         <TableHead>
           <TableRow>
             <TableCell>NOTA FISCAL</TableCell>
-            <TableCell align="left">SACADO</TableCell>
-            <TableCell align="left">CEDENTE</TableCell>
-            <TableCell align="left">EMISSÃO</TableCell>
-            <TableCell align="left">VALOR</TableCell>
-            <TableCell align="left">STATUS</TableCell>
-            <TableCell align="left"></TableCell>
+            <TableCell align="center">SACADO</TableCell>
+            <TableCell align="center">CEDENTE</TableCell>
+            <TableCell align="center">EMISSÃO</TableCell>
+            <TableCell align="center">VALOR</TableCell>
+            <TableCell align="center">STATUS</TableCell>
+            <TableCell align="center"></TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -54,22 +54,24 @@ const TableNotes = ({ data }) => {
               <TableCell component="th" scope="row">
                 {row.orderNfId}
               </TableCell>
-              <TableCell align="left">{row.buyer.name}</TableCell>
-              <TableCell align="left">{row.provider.name}</TableCell>
-              <TableCell align="left">{formatDate(row.emissionDate)}</TableCell>
+              <TableCell align="center">{row.buyer.name}</TableCell>
+              <TableCell align="center">{row.provider.name}</TableCell>
+              <TableCell align="center">{formatDate(row.emissionDate)}</TableCell>
               <TableCell 
-                align="left"
+                align="center"
                 style={{color: '#00AD8C'}}
               >
                 {formatMoney(row.value)}
               </TableCell>
               <TableCell 
-                align="left"
+                align="center"
                 style={{color: '#00AD8C'}}
               >
-                {orderBuyerStatus[row.orderStatusBuyer]}
+                {orderBuyerStatus[row.orderStatusBuyer].toUpperCase()}
               </TableCell>
-              <TableCell align="left"><Button>Dados do cedente</Button></TableCell>
+              <TableCell align="center">
+                <button className={classes.providerButton}>Dados do cedente</button>
+              </TableCell>
             </TableRow>
           ))}
         </TableBody>
