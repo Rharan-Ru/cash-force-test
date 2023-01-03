@@ -98,15 +98,23 @@ This is an example of how to list things you need to use the software and how to
    cd src
    mv .env-example .env
    ```
-4. Suba a Aplicação em Docker ( Na pasta raiz )
+4. Configure o arquivo env ( Dentro da pasta backend ) ( Mude caso queira um ambiente personalizado )
+   ```sh
+   npm install
+   ```
+5. Configure o arquivo env ( Dentro da pasta frontend ) ( Mude caso queira um ambiente personalizado )
+   ```sh
+   npm install
+   ```
+6. Suba a Aplicação em Docker ( Na pasta raiz )
    ```sh
    docker-compose up --build
    ```
-5. Suba os migrates ( Dentro da pasta backend )
+7. Suba os migrates ( Dentro da pasta backend )
    ```sh
    npm run docker-migrate
    ```
-6. Popule o banco de dados ( Dentro da pasta backend )
+8. Popule o banco de dados ( Dentro da pasta backend )
    ```sh
    npm run docker-seed
    ```
