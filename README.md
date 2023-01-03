@@ -98,11 +98,11 @@ This is an example of how to list things you need to use the software and how to
    cd src
    mv .env-example .env
    ```
-4. Configure o arquivo env ( Dentro da pasta backend ) ( Mude caso queira um ambiente personalizado )
+4. Instale as dependências do projeto ( Dentro da pasta backend )
    ```sh
    npm install
    ```
-5. Configure o arquivo env ( Dentro da pasta frontend ) ( Mude caso queira um ambiente personalizado )
+5. Instale as dependências do projeto ( Dentro da pasta frontend )
    ```sh
    npm install
    ```
