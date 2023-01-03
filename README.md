@@ -95,6 +95,7 @@ This is an example of how to list things you need to use the software and how to
    ```
 3. Configure o arquivo env ( Dentro da pasta backend ) ( Mude caso queira um ambiente personalizado )
    ```sh
+   cd src
    mv .env-example .env
    ```
 4. Suba a Aplicação em Docker ( Na pasta raiz )
