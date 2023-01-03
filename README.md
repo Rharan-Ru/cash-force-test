@@ -106,15 +106,19 @@ This is an example of how to list things you need to use the software and how to
    ```sh
    npm install
    ```
-6. Suba a Aplicação em Docker ( Na pasta raiz )
+6. Crie a dist do projeto ( Dentro da pasta backend )
+   ```sh
+   npm run build
+   ```
+7. Suba a Aplicação em Docker ( Na pasta raiz )
    ```sh
    docker-compose up --build
    ```
-7. Suba os migrates ( Dentro da pasta backend )
+8. Suba os migrates ( Dentro da pasta backend )
    ```sh
    npm run docker-migrate
    ```
-8. Popule o banco de dados ( Dentro da pasta backend )
+9. Popule o banco de dados ( Dentro da pasta backend )
    ```sh
    npm run docker-seed
    ```
