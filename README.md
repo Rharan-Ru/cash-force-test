@@ -87,7 +87,7 @@ This is an example of how to list things you need to use the software and how to
 
 1. Clone o Repositório
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone git@github.com:Rharan-Ru/cash-force-test.git
    ```
 2. Configure o arquivo env ( Na pasta raiz ) ( Mude caso queira um ambiente personalizado )
    ```sh
