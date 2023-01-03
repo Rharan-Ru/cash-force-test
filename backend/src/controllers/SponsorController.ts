@@ -1,4 +1,5 @@
 import { Request, Response } from "express";
+import CustomError from "../error/CustomError";
 import { CreateSponsorService, GetSponsorService, ListSponsorService, RemoveSponsorService, UpdateSponsorService } from "../services/SponsorService";
 
 const index = async (req: Request, res: Response): Promise<Response> => {
