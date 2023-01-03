@@ -8,10 +8,11 @@
     "build": "tsc",
     "lint": "eslint . --ext .ts",
     "lint-fix": "eslint . --ext .ts --fix",
-    "docker-migrate": "docker exec -it cashforcetest_backend_1 npx sequelize db:migrate",
-    "docker-seed": "docker exec -it cashforcetest_backend_1 npx sequelize db:seed:all",
-    "docker-undo-migrate": "docker exec -it cashforcetest_backend_1 npx sequelize db:migrate:undo:all",
-    "docker-undo-seed": "docker exec -it cashforcetest_backend_1 npx sequelize db:seed:undo:all"
+    "test": "bash runTests.bash",
+    "docker-migrate": "docker exec -it cash_backend npx sequelize db:migrate",
+    "docker-seed": "docker exec -it cash_backend npx sequelize db:seed:all",
+    "docker-undo-migrate": "docker exec -it cash_backend npx sequelize db:migrate:undo:all",
+    "docker-undo-seed": "docker exec -it cash_backend npx sequelize db:seed:undo:all"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -20,6 +21,7 @@
     "dotenv": "^8.2.0",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
+    "joi": "^17.7.0",
     "morgan": "~1.9.1",
     "mysql2": "^2.3.3",
     "pug": "2.0.0-beta11",
@@ -30,10 +32,14 @@
   "devDependencies": {
     "@types/cors": "^2.8.13",
     "@types/express": "^4.17.15",
+    "@types/mocha": "^10.0.1",
     "@types/node": "^18.11.18",
     "@typescript-eslint/eslint-plugin": "^5.47.1",
     "@typescript-eslint/parser": "^5.47.1",
+    "chai": "4.2.0",
+    "chai-http": "4.3.0",
     "eslint": "^8.30.0",
+    "mocha": "6.1.4",
     "ts-node": "^10.9.1",
     "ts-node-dev": "^2.0.0",
     "typescript": "^4.9.4"

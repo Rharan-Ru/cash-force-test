@@ -26,7 +26,8 @@ const UpdateSponsorService = async (id: string | number, payload: SponsorInput):
 
 const RemoveSponsorService = async (id: string | number): Promise<void> => {
     const sponsor = await GetSponsorService(id)
-    return await sponsor.destroy()
+    await sponsor.destroy()
+    return
 };
 
 export {

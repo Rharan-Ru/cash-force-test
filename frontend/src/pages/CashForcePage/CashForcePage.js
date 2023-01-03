@@ -15,7 +15,6 @@ const CashForcePage = () => {
         const getOrders = async () => {
             const {data} = await api.get("/order")
             setOrders(data)
-            console.log(data)
         }
         getOrders()
     }, [])

@@ -26,7 +26,8 @@ const UpdateProviderService = async (id: string | number, payload: ProviderInput
 
 const RemoveProviderService = async (id: string | number): Promise<void> => {
     const provider = await GetProviderService(id)
-    return await provider.destroy()
+    await provider.destroy()
+    return
 };
 
 export {

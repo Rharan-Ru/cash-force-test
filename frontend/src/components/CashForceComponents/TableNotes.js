@@ -28,7 +28,6 @@ const TableNotes = ({ data, classes }) => {
     const parsedMoney = Intl.NumberFormat(
       'pt-br', {style: 'currency', currency: 'BRL'}
     ).format(money)
-    console.log(parsedMoney)
     return parsedMoney
   }
 

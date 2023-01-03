@@ -3,11 +3,7 @@ import Buyer, { BuyerInput, BuyerOuput } from "../models/Buyers";
 import CNPJ from "../models/CNPJs";
 
 const ListBuyerService = async (): Promise<Buyer[]> => {
-    const buyers = await Buyer.findAll({
-        include: [
-            { model: CNPJ, as: 'cnpj' }
-        ]
-    });
+    const buyers = await Buyer.findAll();
     return buyers
 };
 
@@ -31,7 +27,8 @@ const UpdateBuyerService = async (id: string | number, payload: BuyerInput): Pro
 
 const RemoveBuyerService = async (id: string | number): Promise<void> => {
     const buyer = await GetBuyerService(id)
-    return await buyer.destroy()
+    await buyer.destroy()
+    return
 };
 
 export {

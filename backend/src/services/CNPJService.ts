@@ -26,7 +26,8 @@ const UpdateCNPJService = async (id: string | number, payload: CNPJInput): Promi
 
 const RemoveCNPJService = async (id: string | number): Promise<void> => {
     const cnpj = await GetCNPJService(id)
-    return await cnpj.destroy()
+    await cnpj.destroy()
+    return
 };
 
 export {

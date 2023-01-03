@@ -12,6 +12,7 @@ services:
     volumes:
       - db:/var/lib/mysql
   backend:
+    container_name: cash_backend
     depends_on:
       - mysqldb
       - frontend
@@ -32,33 +33,11 @@ services:
       - './backend:/app'
   frontend:
     build: ./frontend
-    container_name: client_frontend
+    container_name: cash_frontend
     ports:
       - '3000:3000'
     volumes:
       - './frontend:/app'
-
-# services:
-#   api:
-#     build: ./backend
-#     container_name: api_backend
-#     ports:
-#       - '3001:3001'
-#   client:
-#     build: ./frontend
-#     container_name: client_frontend
-#     ports:
-#       - '3000:3000'
-#   mysqldb:
-#     image: mysql
-#     restart: always
-#     environment:
-#       - MYSQL_ROOT_PASSWORD=whaticket
-#       - MYSQL_DATABASE=cashdb
-#     ports:
-#       - '3306:3306'
-#     volumes:
-#       - db:/var/lib/mysql
 
 networks:
     default:

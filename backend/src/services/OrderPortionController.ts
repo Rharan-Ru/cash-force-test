@@ -26,7 +26,8 @@ const UpdateOrderPortionService = async (id: string | number, payload: OrderPort
 
 const RemoveOrderPortionService = async (id: string | number): Promise<void> => {
     const orderPortion = await GetOrderPortionService(id)
-    return await orderPortion.destroy()
+    await orderPortion.destroy()
+    return
 };
 
 export {

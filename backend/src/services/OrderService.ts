@@ -34,10 +34,10 @@ const UpdateOrderService = async (id: string | number, payload: OrderInput): Pro
     return order
 };
 
-
 const RemoveOrderService = async (id: string | number): Promise<void> => {
     const order = await GetOrderService(id)
-    return await order.destroy()
+    await order.destroy()
+    return
 };
 
 export {

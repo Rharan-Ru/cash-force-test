@@ -26,7 +26,8 @@ const UpdateOfferService = async (id: string | number, payload: OfferInput): Pro
 
 const RemoveOfferService = async (id: string | number): Promise<void> => {
     const offer = await GetOfferService(id)
-    return await offer.destroy()
+    await offer.destroy()
+    return
 };
 
 export {

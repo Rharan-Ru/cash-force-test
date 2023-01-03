@@ -26,7 +26,8 @@ const UpdateUserService = async (id: string | number, payload: UserInput): Promi
 
 const RemoveUserService = async (id: string | number): Promise<void> => {
     const user = await GetUserService(id)
-    return await user.destroy()
+    await user.destroy()
+    return
 };
 
 export {
